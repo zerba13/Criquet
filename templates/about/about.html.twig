@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AboutController!
+{% endblock %}
+
+{% block body %}
+	<main
+		id="main">
+		<!-- ======= Breadcrumbs ======= -->
+		<div class="breadcrumbs" data-aos="fade-in">
+			<div class="container">
+				<h2>Notre mission</h2>
+				<p>Criquets & Co a été fondé en 2019 pour répondre ainsi aux besoins en formations spécialisées autour de la
+										          filière des insectes dans un premier temps pour pour accompagner les futurs créateurs d'entreprise à maîtriser
+										          les étapes clés de l'entreprenariat.
+				</p>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+
+		<!-- ======= About Section ======= -->
+		<section id="about" class="about">
+			<div class="container" data-aos="fade-up">
+
+				<div class="row">
+					<div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+						<img src="{{ asset('assets/img/about.jpg') }}" class="img-fluid" alt="">
+					</div>
+					<div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+						<h3>Depuis les années 2020, les insectes sont reconnus par la FAO comme solution alimentaire pour la
+														              croissance mondiale. Émergeant comme alternative écologique et économique pour humains et animaux.</h3>
+						<p class="fst-italic">
+							Comment élever des ténébrions meuniers ? Comment favoriser la croissance des insectes ? Comment savoir si
+														              nos insectes comestibles sont sains ?
+														              Comment les vendre ? Sous quelle forme ? Comment organiser ses postes de travail pour être plus rentable ?
+														              Qui contacter pour créer son entreprise ?
+						</p>
+
+						<p>
+							En 2016, Noémie DUBOURDIEU a elle aussi créé son entreprise, animé des dégustations et vendu sa récolte.
+														              Cependant, la réglementation sur les insectes comestibles qui semblait dans le fou juridique s'est
+														              éclaircie et le flou juridique n'était plus !
+														
+														              Noémie DUBOURDIEU est aussi présidente de la
+							<a href=" www.ffpidi.fr">F.F.P.I.D.I.</a>
+							(Fédération
+														              Française des producteurs
+														              importateurs et distributeurs d'insectes ) depuis avril 2021.
+						</p>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End About Section -->
+
+
+		<!-- ======= Testimonials Section ======= -->
+		<section id="testimonials" class="testimonials">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Témoignages</h2>
+					<p>Quelle sont les retours</p>
+				</div>
+
+				<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+					<div class="swiper-wrapper">
+
+						{% for comment in comments %}
+							<div class="swiper-slide">
+								<div class="testimonial-wrap">
+									<div class="testimonial-item">
+										{% for image in comment.images %}
+											<img src="{{ asset(image) }}" alt="Comment Image"class="testimonial-img">
+										{% endfor %}
+										
+										<h3>{{ comment.author }}</h3>
+										<!-- <h4> &amp; </h4>-->
+										<p>
+											<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+											{{ comment.content }}
+											<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- End testimonial item -->
+						{% endfor %}
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End Testimonials Section -->
+
+	</main>
+	<!-- End #main -->
+{% endblock %}

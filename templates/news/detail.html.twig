@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    
+
+<div class="container-fluid " id="post" style="margin-top: 100px;"> 
+        <div class="row">
+      
+            
+      
+            <div class="col-lg-8 mx-auto"> 
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1"> {{ actuality.title }} </h1>
+                        <!-- Post meta content-->
+                        <div class="text-muted fst-italic mb-2">Publié le {{ actuality.publishat|date('d/m/Y') }} </div>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                            src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="article-img" /></figure>
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4"> {{ actuality.textactuality }} </p>
+                        
+                    </section>
+                </article>
+            </div>
+        </div>
+    </div>
+{% endblock %}

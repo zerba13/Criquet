@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<main
+		id="main">
+
+		<!-- ======= Breadcrumbs ======= -->
+		<div class="breadcrumbs" data-aos="fade-in">
+			<div class="container">
+				<h2>Actualité</h2>
+				<p>Découvrez les dernières nouveautés et les actualités passionnantes de Criquets & Co, où l'avenir durable prend vie à travers le monde fascinant des insectes.</p>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+
+		<!-- ======= Article Section ======= -->
+		<section id="article" class="article">
+
+			<div class="container" data-aos="fade-up">
+
+				<div class="row">
+					{% for actuality in actuality %}
+						<div class="col-md-6 d-flex align-items-stretch">
+							<div class="card">
+								<div class="card-img">
+									<img src="{{ asset('assets/img/events-1.jpg') }}" alt="...">
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">
+										<a href="{{path('app_news_detail',{ 'id':actuality.id })}}  ">{{ actuality.title }}
+										</a>
+									</h5>
+									<p class="card-text">
+										{{ actuality.descriptioncourte }}
+									</p>
+									<p class="fst-italic ">Publié le
+										{{ actuality.publishat|date('d/m/Y') }}
+									</p>
+									<div class="text-right">
+										<a href=" {{path('app_news_detail',{ 'id':actuality.id })}} " class="btn">En savoir plus</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+
+
+			</div>
+		</section>
+		<!-- End Events Section -->
+
+	</main>
+	<!-- End #main -->
+{% endblock %}

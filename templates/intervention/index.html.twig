@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InterventionController!{% endblock %}
+
+{% block body %}
+<main
+		id="main">
+		<!-- ======= Breadcrumbs ======= -->
+		<div class="breadcrumbs" data-aos="fade-in">
+			<div class="container">
+				<h2>Intervention de sensibilisation</h2>
+				<p>Criquets & Co propose aussi des prestations de sensibilisation autour des insectes pour tous (milieux
+					          scolaire tous niveaux, en entreprise ou pour des chambres d'agriculture)
+				</p>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+
+		<!-- ======= About Section ======= -->
+		<section id="about" class="about">
+			<div class="container" data-aos="fade-up">
+
+				<div class="row">
+					<div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+						<img src="{{ asset('assets/img/about.jpg') }}" class="img-fluid" alt="">
+					</div>
+					<div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+						<h3>Des interventions scolaire adaptées à chaque niveaux</h3>
+						<p class="fst-italic">
+							Ils existent différents cycles en fonction de chaque niveau allant du primaire jusqu'àu lycée et
+							              enseignements supérieur:
+						</p>
+						<ul>
+							<li>
+								<i class="bi bi-book"></i>Les différentes manifestations de la vie animale (Primaire)
+							</li>
+							<p>
+								Les enfants découvrent le cycle que constituent la naissance, la croissance, la reproduction, le
+								                vieillissement, la mort en assurant les soins nécessaires aux élevages dans la classe.
+								                Au cours du cycle 2, l'élève va explorer, observer, expérimenter et questionner le monde qui l'entoure.
+							</p>
+							<li>
+								<i class="bi bi-book"></i>
+								Le vivant, sa diversité et les fonctions qui le caractérisent
+								                (Collège)</li>
+							<p>L'élevage d'insectes répond à une problématique environnementale. C'est une solution pour recycler nos
+								                déchets ? Économiser de l'eau ? Produire l'alimentation de nos animaux d'élevage ?
+								                Présentation de la filière insectes, la biodiversité aujourd'hui, une agriculture durable, l'économie
+								                circulaire.
+							</p>
+
+							<li>
+								<i class="bi bi-book"></i>Le potentiel des insectes. Une solution d'avenir? (Lycée et plus)
+							</li>
+							<p>Découvrir le potentiel des insectes pour l'avenir. Présentation de la filière insectes, de la
+								                réglementation actuelle et explication de l'agriculture circulaire.
+							</p>
+						</ul>
+
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		
+		<section id="about" class="about">
+			<div class="container" data-aos="fade-up">
+
+				<div class="row">
+					<div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
+						<img src="{{ asset('assets/img/about.jpg') }}" class="img-fluid" alt="">
+					</div>
+					<div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+						<h3>Les insectes comestibles dans votre entreprise</h3>
+						<p class="fst-italic">
+							Que vous soyez concerné de loin où de près, dans le milieu de l'agriculture ou non, vous trouverez tous les indispensables a savoir dans cette formation
+						</p>
+						<p>
+							Description de la formation
+						</p>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ======= Testimonials Section ======= -->
+	<section id="testimonials" class="testimonials">
+		<div class="container" data-aos="fade-up">
+
+			<div class="section-title">
+				<h2>Témoignages</h2>
+				<p>Quelle sont les retours</p>
+			</div>
+
+			<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+				<div class="swiper-wrapper">
+
+					<div class="swiper-slide">
+						<div class="testimonial-wrap">
+							<div class="testimonial-item">
+								<img src="{{ asset('assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
+								<h3>Pierre Antoine ROUSSEL</h3>
+								<!-- <h4> &amp; </h4>-->
+								<p>
+									<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+									Une grande disponibilité de la part de Noémie, un engagement auprès des formés (dépassement des
+									                    horaires prévus dû à nos interactions, réponses à des heures et jours improbables, ...)
+									                    Les acteurs de ce secteurs n'étant ni nombreux ni très bavards , il est important de pouvoir
+									                    comprendre ce type d'activité dans son ensemble (d'où aussi l'importance de la FFPIDI).
+									                    En tout cas pour tous ceux qui se reconvertissent et qui ne connaissent pas bien ni le secteur de
+									                    l'insecte ni même ce qu'est de créer une entreprise, c'est une formation que je recommande.
+									<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- End testimonial item -->
+
+
+
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+		</div>
+	</section>
+	<!-- End Testimonials Section -->
+
+</main>
+<!-- End #main -->
+{% endblock %}
