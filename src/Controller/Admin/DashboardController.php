@@ -9,6 +9,7 @@ use App\Entity\Actuality;
 use App\Entity\Category;
 use App\Entity\Commentary;
 use App\Entity\IdentitéWebsite;
+use App\Entity\User;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -49,6 +50,9 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Formation', 'fas fa-book', Product::class);
         yield MenuItem::linkToCrud('Actualité', 'fas fa-newspaper', Actuality::class);
         yield MenuItem::linkToCrud('Commentaires', 'fas fa-comment', Commentary::class);
+        yield MenuItem::linkToCrud('Utilisateur', 'fas fa-user', User::class);
+
+
         
 
 

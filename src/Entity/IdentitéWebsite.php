@@ -126,12 +126,12 @@ class IdentitéWebsite
         return $this;
     }
 
-    public function getDeclarationActivity(): ?string
+    public function getDeclaration_activity(): ?string
     {
         return $this->declaration_activity;
     }
 
-    public function setDeclarationActivity(?string $declaration_activity): static
+    public function setDeclaration_activity(?string $declaration_activity): static
     {
         $this->declaration_activity = $declaration_activity;
 
