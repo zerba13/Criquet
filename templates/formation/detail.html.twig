@@ -76,21 +76,7 @@
               <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li><li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li><li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li><li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li><li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li><li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li><li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li>
+              
             </ul>
           </div>
           <div class="col-lg-9 mt-4 mt-lg-0">
@@ -99,7 +85,7 @@
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Prérequis et modalités d'inscription pour suivre la formation</h3>
-                    <p> {{ product.fulldescription }} </p>
+                    <p> {{ product.required }} </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="{{asset('assets/img/course-details-tab-1.png')}}" alt="" class="img-fluid">
@@ -109,16 +95,9 @@
               <div class="tab-pane" id="tab-2">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>110H en FOAD (Formation ouverte à distance)</h3>
-                    <p class="fst-italic">La formation se décompose en plusieurs modules avec le formateur où en
-                      individuelle</p>
-                    <p>25 heures de formation individuelle en direct avec un formateur, réparties en 5 sessions de 2
-                      heures, 2 sessions de 3 heures et 30 minutes, ainsi que 2 sessions de 3 heures via
-                      visioconférence. De plus, 2 heures de suivi à distance sont incluses dans le programme. En
-                      complément, les stagiaires devront consacrer 85 heures à des travaux personnels, incluant des
-                      recherches, la création de tableaux, la lecture de documents complémentaires aux visioconférences,
-                      la rédaction et la réalisation d'exercices. Ce temps alloué est une moyenne attendue pour assurer
-                      un apprentissage efficace des participants.</p>
+                    <h3>{{ product.duration }}H {{ product.places }} </h3>
+                  
+                    <p>{{ product.durationdescription }}</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="{{asset('assets/img/course-details-tab-3.png')}}" alt="" class="img-fluid">
@@ -129,12 +108,8 @@
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Nos formations peuvent être accessibles aux personnes en situation de handicap.</h3>
-                    <p class="fst-italic">Chaque situation étant unique, nous vous demandons de préciser à l'inscription
-                      votre handicap.</p>
-                    <p>Ainsi nous pourrons faire en sorte de vous accueillir dans les meilleurs conditions pour suivre
-                      la formation. Pour toutes informations complémentaires, nous vous conseillons les structures
-                      suivantes : <a href="https://www.onisep.fr/Formation-et-handicap">ONISEP </a>, <a
-                        href="https://www.agefiph.fr/">AGEFIPH</a> et <a href="https://www.fiphfp.fr/">FIPHFP</a>. </p>
+                    
+                    <p> {{ product.Handicapcondition }} </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="{{asset('assets/img/course-details-tab-4.png')}}" alt="" class="img-fluid">
@@ -147,12 +122,8 @@
                     <h3></h3>
                     <p class="fst-italic">Notre organisme de formation s'engage à vous répondre dans un délai de 72
                       heures.</p>
-                    <p>Nous envisagerons la date de début de formation la plus appropriée en fonction de vos besoins,
-                      préférences et contraintes. Sauf cas particulier et en fonction des disponibilités du stagiaire,
-                      du formateur, le délai pour la mise en place de la formation est habituellement d'un mois (en
-                      moyenne). L'accès à nos formations peut être initié par l'employeur, à l'initiative du salarié,
-                      par un particulier, à la demande de Pôle Emploi …<br>Pour vos demandes de formation, contactez
-                      nous via notre <a href="">Formulaires</a> </p>
+                      {# access #}
+                    <p>{{ product.access }} </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="{{asset('assets/img/course-details-tab-5.png')}}" alt="" class="img-fluid">
@@ -163,10 +134,8 @@
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Découvrez les financements auxquels vous avez droit</h3>
-                    <p class="fst-italic">Il existe plus d’une dizaine de financements possibles. A qui s’adressent-ils
-                      ? Comment en bénéficier ? Et pour quelles formations ? </p>
-                    <p>Clarifier vos droits au financement est une étape cruciale dans la mise en œuvre de votre
-                      parcours de formation. Pour y voir plus clair, nous vous proposons de nous l'indiquer dans le formulaire d'inscription afin de trouver le financement auquel vous pouvez prétendre.</p>
+                    
+                    <p> {{ product.investment }} </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="{{asset('assets/img/course-details-tab-2.png')}}" alt="" class="img-fluid">
@@ -176,9 +145,8 @@
               <div class="tab-pane" id="tab-6">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Les prochaines sessions de la formation "Devenir éleveur d'insectes comestibles"</h3>
-                    <p class="fst-italic">À noter que ces dates servent d'indication et peuvent être adapter à chacun </p>
-                    <p>Du 3 juillet 2023 au 13 octobre 2023 <br>Du 11 septembre 2023 au 15 décembre 2023 <br>Du 2 octobre 2023 au 12 janvier 2024 <br> Du 13 novembre 2023 au 16 février 2024</p>
+                    <h3>Les prochaines sessions de la formation "{{ product.title }}"</h3>
+                    <p>{{ product.calendar }}</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="{{asset('assets/img/course-details-tab-2.png')}} " alt="" class="img-fluid">

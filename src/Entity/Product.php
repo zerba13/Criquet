@@ -50,6 +50,15 @@ class Product
     #[ORM\Column(type: Types::SMALLINT)]
     private ?int $duration = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $Access = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $calendar = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $duration_description = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -195,6 +204,42 @@ class Product
     public function setDuration(int $duration): static
     {
         $this->duration = $duration;
+
+        return $this;
+    }
+
+    public function getAccess(): ?string
+    {
+        return $this->Access;
+    }
+
+    public function setAccess(string $Access): static
+    {
+        $this->Access = $Access;
+
+        return $this;
+    }
+
+    public function getCalendar(): ?string
+    {
+        return $this->calendar;
+    }
+
+    public function setCalendar(string $calendar): static
+    {
+        $this->calendar = $calendar;
+
+        return $this;
+    }
+
+    public function getDurationDescription(): ?string
+    {
+        return $this->duration_description;
+    }
+
+    public function setDurationDescription(string $duration_description): static
+    {
+        $this->duration_description = $duration_description;
 
         return $this;
     }
