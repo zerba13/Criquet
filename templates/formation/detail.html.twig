@@ -2,165 +2,187 @@
 
 {% block body %}
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs" data-aos="fade-in">
-      <div class="container">
-        <h2> {{product.title}} </h2>
-        <p> {{product.descriptionShort}} </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
+	<!-- ======= Breadcrumbs ======= -->
+	<div class="breadcrumbs" data-aos="fade-in">
+		<div class="container">
+			<h2>
+				{{product.title}}
+			</h2>
+			<p>
+				{{product.descriptionShort | raw}}
+			</p>
+		</div>
+	</div>
+	<!-- End Breadcrumbs -->
 
-    <!-- ======= Cource Details Section ======= -->
-    <section id="course-details" class="course-details">
-      <div class="container" data-aos="fade-up">
-      	
-        <div class="row">
-          <div class="col-lg-8">
-            <img src="{{asset('assets/img/course-details.jpg')}}" class="img-fluid" alt="">
-            <h3>{{ product.title }}</h3>
-            <p>{{ product.fullDescription }}</p>
-          </div>
-          <div class="col-lg-4">
+	<!-- ======= Cource Details Section ======= -->
+	<section id="course-details" class="course-details">
+		<div class="container" data-aos="fade-up">
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Formateur</h5>
-              <p> {{ product.trainer }} </a></p>
-            </div>
+			<div class="row">
+				<div class="col-lg-8">
+					<img src="{{asset('assets/img/course-details.jpg')}}" class="img-fluid" alt="">
+					<h3>{{ product.title }}</h3>
+					<p>{{ product.fullDescription | raw }}</p>
+				</div>
+				<div class="col-lg-4">
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Lieux</h5>
-              <p> {{product.places}} </p>
-            </div>
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Validation visé</h5>
-              <p> {{product.diploma}} </p>
-            </div>
+					<div class="course-info d-flex justify-content-between align-items-center">
+						<h5>Formateur</h5>
+						<p>{{ product.trainer }}
+						</p>
+					</a>
+				</p>
+			</div>
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Durée</h5>
-              <p>{{ product.duration }}H</p>
-            </div>
+			<div class="course-info d-flex justify-content-between align-items-center">
+				<h5>Lieux</h5>
+				<p>
+					{{product.places}}
+				</p>
+			</div>
+			<div class="course-info d-flex justify-content-between align-items-center">
+				<h5>Validation visé</h5>
+				<p>
+					{{product.diploma}}
+				</p>
+			</div>
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Prix (net de taxe)</h5>
-              <p>{{product.price}} €</p>
-            </div>
+			<div class="course-info d-flex justify-content-between align-items-center">
+				<h5>Durée</h5>
+				<p>{{ product.duration }}H</p>
+			</div>
 
-          </div>
+			<div class="course-info d-flex justify-content-between align-items-center">
+				<h5>Prix (net de taxe)</h5>
+				{% if product.price is not null %}
+					<p>{{ product.price }}€</p>
+				{% else %}
+					<p>Sur devis</p>
+				{% endif %}
+			</div>
 
-        </div>
-    </section><!-- End Cource Details Section -->
+		</div>
 
-    <!-- ======= Cource Details Tabs Section ======= -->
-    <section id="cource-details-tabs" class="cource-details-tabs">
-      <div class="container" data-aos="fade-up">
+	</div>
+</section>
+<!-- End Cource Details Section -->
 
-        <div class="row">
-          <div class="col-lg-3">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Prérequis</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Durée et modalités</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Information handicap</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Délais d'accès à la formation</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Financement</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
-              </li>
-              
-            </ul>
-          </div>
-          <div class="col-lg-9 mt-4 mt-lg-0">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Prérequis et modalités d'inscription pour suivre la formation</h3>
-                    <p> {{ product.required }} </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{{asset('assets/img/course-details-tab-1.png')}}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>{{ product.duration }}H {{ product.places }} </h3>
-                  
-                    <p>{{ product.durationdescription }}</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{{asset('assets/img/course-details-tab-3.png')}}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Nos formations peuvent être accessibles aux personnes en situation de handicap.</h3>
-                    
-                    <p> {{ product.Handicapcondition }} </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{{asset('assets/img/course-details-tab-4.png')}}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3></h3>
-                    <p class="fst-italic">Notre organisme de formation s'engage à vous répondre dans un délai de 72
-                      heures.</p>
-                      {# access #}
-                    <p>{{ product.access }} </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{{asset('assets/img/course-details-tab-5.png')}}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-5">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Découvrez les financements auxquels vous avez droit</h3>
-                    
-                    <p> {{ product.investment }} </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{{asset('assets/img/course-details-tab-2.png')}}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-6">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Les prochaines sessions de la formation "{{ product.title }}"</h3>
-                    <p>{{ product.calendar }}</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{{asset('assets/img/course-details-tab-2.png')}} " alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- ======= Cource Details Tabs Section ======= -->
+<section id="cource-details-tabs" class="cource-details-tabs">
+	<div class="container" data-aos="fade-up">
 
-      </div>
-    </section><!-- End Cource Details Tabs Section -->
-  
-  
- 
+		<div class="row">
+			<div class="col-lg-3">
+				<ul class="nav nav-tabs flex-column">
+					<li class="nav-item">
+						<a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Prérequis</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#tab-2">Durée et modalités</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#tab-3">Information handicap</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#tab-4">Délais d'accès à la formation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#tab-5">Financement</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#tab-6">Session</a>
+					</li>
 
-{% endblock %}
+				</ul>
+			</div>
+			<div class="col-lg-9 mt-4 mt-lg-0">
+				<div class="tab-content">
+					<div class="tab-pane active show" id="tab-1">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Prérequis et modalités d'inscription pour suivre la formation</h3>
+								<p>
+									{{ product.required | raw }}
+								</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="{{asset('assets/img/course-details-tab-1.png')}}" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-2">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>{{ product.duration  }}H
+									{{ product.places }}
+								</h3>
+
+								<p>{{ product.durationdescription | raw}}</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="{{asset('assets/img/course-details-tab-3.png')}}" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-3">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Nos formations peuvent être accessibles aux personnes en situation de handicap.</h3>
+
+								<p>
+									{{ product.Handicapcondition | raw}}
+								</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="{{asset('assets/img/course-details-tab-4.png')}}" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-4">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3></h3>
+								<p class="fst-italic">Notre organisme de formation s'engage à vous répondre dans un délai de 72
+									                      heures.</p>
+							
+								<p>{{ product.access | raw}}
+								</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="{{asset('assets/img/course-details-tab-5.png')}}" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-5">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Découvrez les financements auxquels vous avez droit</h3>
+
+								<p>
+									{{ product.investment | raw}}
+								</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="{{asset('assets/img/course-details-tab-2.png')}}" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-6">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Les prochaines sessions de la formation "{{ product.title }}"</h3>
+								<p>{{ product.calendar | raw}}</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="{{asset('assets/img/course-details-tab-2.png')}} " alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- End Cource Details Tabs Section -->{% endblock %}

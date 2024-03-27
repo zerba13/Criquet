@@ -37,6 +37,19 @@ class IdentitéWebsite
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $declaration_activity = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $facebook = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $instagram = null;
+
+   
+
+    #[ORM\Column(length: 255)]
+    private ?string $linkedin = null;
+
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -137,4 +150,44 @@ class IdentitéWebsite
 
         return $this;
     }
+
+    public function getFacebook(): ?string
+    {
+        return $this->facebook;
+    }
+
+    public function setFacebook(string $facebook): static
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    public function getInstagram(): ?string
+    {
+        return $this->instagram;
+    }
+
+    public function setInstagram(string $instagram): static
+    {
+        $this->instagram = $instagram;
+
+        return $this;
+    }
+
+  
+
+    public function getLinkedin(): ?string
+    {
+        return $this->linkedin;
+    }
+
+    public function setLinkedin(string $linkedin): static
+    {
+        $this->linkedin = $linkedin;
+
+        return $this;
+    }
+
+  
 }

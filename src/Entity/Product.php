@@ -59,6 +59,9 @@ class Product
     #[ORM\Column(type: Types::TEXT)]
     private ?string $duration_description = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private $img = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -240,6 +243,18 @@ class Product
     public function setDurationDescription(string $duration_description): static
     {
         $this->duration_description = $duration_description;
+
+        return $this;
+    }
+
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    public function setImg($img): static
+    {
+        $this->img = $img;
 
         return $this;
     }

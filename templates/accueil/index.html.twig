@@ -1,145 +1,164 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Criquets & Co{% endblock %}
+{% block title %}Criquets & Co
+{% endblock %}
 
 {% block body %}
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>L'élevage d'insectes comestibles,<br>une débouché pour demain</h1>
-      <h2>L'organisme Criquets & Co est là pour vous accompagner !</h2>
-      <a href="{{path('app_contact')}}" class="btn-get-started">Rejoins nous</a>
-    </div>
-  </section><!-- End Hero -->
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-content-center align-items-center">
+	<div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+		<h1>L'élevage d'insectes comestibles,<br>une débouché pour demain</h1>
+		<h2>L'organisme Criquets & Co est là pour vous accompagner !</h2>
+		<a href="{{path('app_contact')}}" class="btn-get-started">Rejoins nous</a>
+	</div>
+</section>
+<!-- End Hero -->
 
-  <main id="main">
+<main
+	id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+	<!-- ======= About Section ======= -->
+	<section id="about" class="about">
+		<div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="{{ asset('assets/img/group-formation.jpg') }}" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Criquets and Co, votre organisme de formations spécialisé dans la filière des insectes comestibles</h3>
-            <p class="fst-italic">
-              Selon la FAO, les insectes répondent aux problèmes alimentaires liés à la croissance de la population mondiale.
-               La filière des insectes comestibles est une alternative écologique et économique pour nourrir les humains et les animaux.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Les techniques d'élevage : la gestion des insectes, les conditions de croissance optimales attendues par la profession ou encore comment anticiper et pérenniser son élevage.
-</li>
-              <li><i class="bi bi-check-circle"></i> Formation personnalisée : Acquérez les compétences nécessaires pour
-                réussir dans l'élevage d'insectes et l'entreprenariat grâce à une formation adaptée à votre niveau
-                d'expérience.
-              </li>
-              <li><i class="bi bi-check-circle"></i>Avenir durable : Contribuez à l'avenir écologique en participant à
-                une industrie alimentaire innovante et respectueuse de l'environnement.</li>
-            </ul>
-            <p>
-              Rejoignez Criquets & Co et faites partie d'une communauté passionnée engagée à repenser notre approche de
-              l'alimentation et de l'agriculture. Ensemble, nous pouvons faire une différence significative pour
-              l'avenir de notre planète.
-            </p>
+			<div class="row">
+				<div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+					<img src="{{ asset('assets/img/group-formation.jpg') }}" class="img-fluid" alt="">
+				</div>
+				<div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+					<h3>Criquets and Co, votre organisme de formations spécialisé dans la filière des insectes comestibles</h3>
+					<p class="fst-italic">
+						Selon la FAO, les insectes répondent aux problèmes alimentaires liés à la croissance de la population mondiale.
+																								               La filière des insectes comestibles est une alternative écologique et économique pour nourrir les humains et les animaux.
+					</p>
+					<ul>
+						<li>
+							<i class="bi bi-check-circle"></i>
+							Les techniques d'élevage : la gestion des insectes, les conditions de croissance optimales attendues par la profession ou encore comment anticiper et pérenniser son élevage.
+						</li>
+						<li>
+							<i class="bi bi-check-circle"></i>
+							Formation personnalisée : Acquérez les compétences nécessaires pour
+																												                réussir dans l'élevage d'insectes et l'entreprenariat grâce à une formation adaptée à votre niveau
+																												                d'expérience.
+						</li>
+						<li>
+							<i class="bi bi-check-circle"></i>Avenir durable : Contribuez à l'avenir écologique en participant à
+																																                une industrie alimentaire innovante et respectueuse de l'environnement.</li>
+					</ul>
+					<p>
+						Criquets & Co est là pour vous accompagner. Faites partie des acteurs passionnés et engagés à repenser 
+																								              l'alimentation et de l'agriculture de demain.
+					</p>
 
-          </div>
-        </div>
+				</div>
+			</div>
 
-      </div>
-    </section><!-- End About Section -->
+		</div>
+	</section>
+	<!-- End About Section -->
 
-    
 
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
-      <div class="container" data-aos="fade-up">
+	<!-- ======= Why Us Section ======= -->
+	<section id="why-us" class="why-us">
+		<div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Pourquoi choisir Criquet & Co</h3>
-              <p>Nos formations couvrent un large éventail de sujets liés aux insectes comestibles :<br>
-              I Les techniques d'élevage : la gestion des insectes, les conditions de croissance optimales attendues par la profession ou encore comment anticiper et pérenniser son élevage.
-                 </p>
-              <div class="text-center">
-                <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4>Certification Qualiopi</h4>
-                    <p>La certification d'État Qualiopi atteste de la qualité de nos formations en entomoculture.</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
-        </div>
+			<div class="row">
+				<div class="col-lg-4 d-flex align-items-stretch">
+					<div class="content">
+						<h3>Pourquoi choisir Criquet & Co</h3>
+						<p>Criquets and Co, le premier organisme de formation spécialisé dans l'entomoculture a été fondé en 2019 pour former toutes personnes souhaitant établir un projet autour des insectes comestibles !<br>
+							Les informations peu fiables d'internet nécessitent la mise en place d'une formation professionnelle spécialisée pour acquérir de nouvelles compétences ou améliorer celles que vous possédez déjà.							
+							Vous arriverez ainsi sur le marché des insectes comestibles en maitrisant la filière et ses obligations incontournables.							
+							Comme nous sommes passionnés et expert dans le domaine, nous dispensons une formation actualisée avec une pédagogie innovante pour répondre à vos attentes.							
+						</p>
+						<div class="text-center">
+							<a href={{ path('app_about') }} class="more-btn">En savoir plus
+								<i class="bx bx-chevron-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+					<div class="icon-boxes d-flex flex-column justify-content-center">
+						<div class="row">
+							<div class="col-xl-4 d-flex align-items-stretch">
+								<div class="icon-box mt-4 mt-xl-0">
+									<i class="ri-award-line"></i>
+									<h4><br>Certification Qualiopi</h4>
+									<p>La certification qualité a été délivrée au titre de la catégorie d’action suivante : - L.6313-1 - 1° Actions de formation</p>
+								</div>
+							</div>
+							<div class="col-xl-4 d-flex align-items-stretch">
+								<div class="icon-box  mt-4 mt-xl-0">
+									<i class="ri-cloud-fill "></i>
+									<h4><br>Formations 100% distanciel</h4>
+									<p>Formations innovantes avec inclusion de nouvelles technologies de l'informations et de la communication.</p>
+								</div>
+							</div>
+							<div class="col-xl-4 d-flex align-items-stretch">
+								<div class="icon-box  mt-4 mt-xl-0">
+									<i class="ri-group-fill "></i>
+									<h4><br>Formations Adaptées à Tous les Niveaux</h4>
+									<p>Nos programmes de formation peuvent être adapter à chacun.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End .content-->
+				</div>
+			</div>
 
-      </div>
-    </section><!-- End Why Us Section -->
+		</div>
+	</section>
+	<!-- End Why Us Section -->
 
-    
 
-    <!-- ======= Popular Courses Section ======= -->
-    <section id="popular-courses" class="courses">
-      <div class="container" data-aos="fade-up">
+	<!-- ======= Popular Courses Section ======= -->
+	<section id="popular-courses" class="courses">
+		<div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Formations</h2>
-          <p>Formation populaires</p>
-        </div>
+			<div class="section-title">
+				<h2>Formations</h2>
+				<p>Formations populaires</p>
+			</div>
 
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+			<div class="row" data-aos="zoom-in" data-aos-delay="100">
+				{% for  product in products  %}
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+						<div class="course-item">
+							{% if product.img is empty %}
+								<img src="{{ asset('assets/img/formation/course-1.jpg') }}" class="img-fluid" alt="...">
+							{% else %}
+								<img src="{{ asset('assets/img/formation/' ~ product.img) }}" class="img-fluid" alt="...">
+							{% endif %}
+								{# <img src="{{ asset('assets/img/formation/course-1.jpg') }}" class="img-fluid" alt="..."> #}
+							{# <p> {{ product.img}} </p> #}
+							<div class="course-content d-inline">
+								<div class="d-flex justify-content-between align-items-center mb-3">
+									{% for category in category %}
+										{% if product.idcategory == category.id %}
+											<h4>{{ category.name }}</h4>
+										{% endif %}
+									{% endfor %}
+								</div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="{{ asset('assets/img/course-1.jpg') }}" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Elevage</h4>
-                  <p class="price">169€</p>
-                </div>
+								<h3>
+									<a href="{{ path('app_formation_detail',{ 'id':product.id}) }}">{{ product.title }}</a>
+								</h3>
+								<p>{{ product.descriptionshort | raw }}</p>
 
-                <h3><a href="course-details.html">Eleveur d'insectes</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem
-                  tempore.</p>
-                
-                   </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<!-- End Course Item-->
 
-          
-          </div> <!-- End Course Item-->
 
-        </div>
+		</div>
+		<!-- End Course Item-->
 
-      </div>
-    </section><!-- End Popular Courses Section -->
+	</div>
 
-  
-
-  </main
-{% endblock %}
+</div></section><!-- End Popular Courses Section --></main {% endblock %}

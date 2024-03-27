@@ -11,10 +11,10 @@
               {{  idWebsite.getWebSite.adress }} <br>
               {{  idWebsite.getWebSite.city}} <br>
               {{ idWebsite.getWebSite.country }} <br><br>
-              <strong>N° SIRET:</strong> {{ idWebsite.getWebSite.siret }} <br> 
-              <strong>N° déclaration d'activité:</strong> {{ idWebsite.getWebSite.declaration_activity }} <br> 
-              <strong>Télephone:</strong> {{ idWebsite.getWebSite.phone }} <br>
-               <strong>Email:</strong> {{ idWebsite.getWebSite.email}} <br> 
+              <strong>N° SIRET :</strong> {{ idWebsite.getWebSite.siret }} <br> 
+              <strong>N° déclaration d'activité :</strong> {{ idWebsite.getWebSite.declaration_activity }} <br> 
+              <strong>Télephone :</strong> {{ idWebsite.getWebSite.phone }} <br>
+               <strong>Email :</strong> {{ idWebsite.getWebSite.email}} <br> 
 
               </p>
           </div>
@@ -22,9 +22,9 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Liens utiles</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">A propos</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Nos formations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ path('app_acceuil')}}">Accueil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ path('app_about') }}">A propos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ path('app_formation') }}">Nos formations</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Mentions légales</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">C.G.V.</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Politique de confidentialité</a></li>
@@ -36,7 +36,7 @@
             <h4>Abonne toi à notre Newsletter</h4>
             <p>Reste informé sur toutes les formations disponibles</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Abonnez-vous">
             </form>
           </div>
 
@@ -48,16 +48,14 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>2023 Criquet&Co</span></strong>. All Rights Reserved
+          &copy;  <strong><span>2023 {{idWebsite.getWebSite.name}}</span></strong>. Tous droits réservés
         </div>
 
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-tiktok"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="{{idWebsite.getWebSite.facebook}}" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="{{ idWebsite.getWebSite.instagram }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="{{idWebsite.getWebSite.linkedin}}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
