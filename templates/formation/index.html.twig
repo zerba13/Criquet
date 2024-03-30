@@ -40,7 +40,7 @@
 									<h3>
 										<a href="{{ path('app_formation_detail',{ 'id':product.id}) }}">{{ product.title }}</a>
 									</h3>
-									<p>{{ product.descriptionshort }}</p>
+									<p>{{ product.descriptionshort | raw}}</p>
 
 								</div>
 							</div>
