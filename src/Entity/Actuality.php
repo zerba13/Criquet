@@ -20,8 +20,8 @@ class Actuality
     #[ORM\Column]
     private ?\DateTimeImmutable $publish_at = null;
 
-    #[ORM\Column(type: Types::BLOB, nullable: true)]
-    private $image_card = null;
+    #[ORM\Column(type: Types::STRING, nullable: true)]
+    public ?string $image_card = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description_courte = null;
@@ -58,12 +58,12 @@ class Actuality
         return $this;
     }
 
-    public function getImageCard()
+    public function getImageCard() : ?string
     {
         return $this->image_card;
     }
 
-    public function setImageCard($image_card): static
+    public function setImageCard(string $image_card): static
     {
         $this->image_card = $image_card;
 

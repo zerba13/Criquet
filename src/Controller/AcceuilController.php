@@ -14,7 +14,7 @@ class AcceuilController extends AbstractController
     #[Route('/', name: 'app_acceuil')]
     public function index( ProductRepository $productRepo,CategoryRepository $categoryRepo ): Response
     {
-        $products = $productRepo ->findAll();
+        $products = $productRepo ->findBy([], ['id' => 'DESC']);
         $category = $categoryRepo->findAll();
 
         

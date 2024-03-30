@@ -13,7 +13,7 @@ class FormationController extends AbstractController
     #[Route('/formation', name: 'app_formation')]
     public function index(ProductRepository $productRepo, CategoryRepository $categoryRepo, ): Response
     {
-        $products = $productRepo ->findAll();
+        $products = $productRepo ->findBy([], ['id' => 'DESC']);
         $category = $categoryRepo->findAll();
 
 

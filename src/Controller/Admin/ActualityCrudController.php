@@ -33,7 +33,7 @@ class ActualityCrudController extends AbstractCrudController
             IdField::new('ID')->hideOnForm(),
             TextField::new('Title')->setLabel('Titre'),
             ImageField::new('image_card')->hideOnIndex()->setLabel('Image')->setUploadDir('public/assets/img/article'),
-            DateTimeField::new('publish_at')->hideOnForm()->setLabel('Publié à'),
+            DateTimeField::new('publish_at')->setLabel('Publié à'),
             TextEditorField::new('description_courte')->hideOnIndex()->setFormType(CKEditorType::class)->setLabel('Description courte'),
             TextEditorField::new('text_actuality')->hideOnIndex()->setFormType(CKEditorType::class)->setLabel('Article complet'),
         ];

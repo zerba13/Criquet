@@ -12,7 +12,7 @@ class NewsController extends AbstractController
     #[Route('/actualite', name: 'app_news')]
     public function index(ActualityRepository $ActualityRepo,  ): Response
     {
-        $actuality = $ActualityRepo->findAll();
+        $actuality = $ActualityRepo->findBy([], ['id' => 'DESC']);
         return $this->render('news/index.html.twig', [
             'actuality' => $actuality,
 

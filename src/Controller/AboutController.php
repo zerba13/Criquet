@@ -12,7 +12,7 @@ class AboutController extends AbstractController
     #[Route('/notre-mission', name: 'app_about')]
     public function index(CommentaryRepository $commentaryRepository,  ): Response
     {
-        $comments=$commentaryRepository->findAll();
+        $comments=$commentaryRepository->findBy([], ['publish_at' => 'DESC']);
       
 
 

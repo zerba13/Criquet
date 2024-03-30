@@ -23,12 +23,12 @@
 						<div class="col-md-6 d-flex align-items-stretch">
 							<div class="card">
 								<div class="card-img">
-									{# {% if actuality.image_card is null %}
+									{% if actuality.image_card is empty %}
 										<img src="{{ asset('assets/img/events-1.jpg') }}" class="img-fluid" alt="...">
 									{% else %}
-										<img src="{{ asset('assets/img/formation/' ~ actuality.image_card ) }}" class="img-fluid" alt="...">
-									{% endif %} #}
-									<img src="{{ asset('assets/img/events-1.jpg') }}" alt="...">
+										<img src="{{ asset('assets/img/article/' ~ actuality.image_card ) }}" class="img-fluid" alt="...">
+									{% endif %}
+									{# <img src="{{ asset('assets/img/events-1.jpg') }}" alt="..."> #}
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">
