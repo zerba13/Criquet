@@ -27,7 +27,7 @@ class CommentaryCrudController extends AbstractCrudController
             TextField::new('author')->setLabel('Auteur'),
             TextEditorField::new('content')->setLabel('Contenu'),
             ImageField::new('images')->hideOnIndex()->setUploadDir('public/assets/img/commentaire'),
-            DateTimeField::new('PublishAt')->setLabel('Date de publication'),
+            DateTimeField::new('publish_at')->setLabel('Date de publication'),
         ];
     }
 }
