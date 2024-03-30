@@ -13,7 +13,6 @@ class NewsController extends AbstractController
     public function index(ActualityRepository $ActualityRepo,  ): Response
     {
         $actuality = $ActualityRepo->findAll();
-        
         return $this->render('news/index.html.twig', [
             'actuality' => $actuality,
 

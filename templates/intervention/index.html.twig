@@ -94,27 +94,29 @@
 				<p>Quelle sont les retours</p>
 			</div>
 
-			<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-				<div class="swiper-wrapper">
+			<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="75">
+					<div class="swiper-wrapper">
 
-					<div class="swiper-slide">
-						<div class="testimonial-wrap">
-							<div class="testimonial-item">
-								<img src="{{ asset('assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
-								<h3>Pierre Antoine ROUSSEL</h3>
-								<!-- <h4> &amp; </h4>-->
-								<p>
-									<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-									Une grande disponibilité de la part de Noémie, un engagement auprès des formés (dépassement des
-									                    horaires prévus dû à nos interactions, réponses à des heures et jours improbables, ...)
-									                    Les acteurs de ce secteurs n'étant ni nombreux ni très bavards , il est important de pouvoir
-									                    comprendre ce type d'activité dans son ensemble (d'où aussi l'importance de la FFPIDI).
-									                    En tout cas pour tous ceux qui se reconvertissent et qui ne connaissent pas bien ni le secteur de
-									                    l'insecte ni même ce qu'est de créer une entreprise, c'est une formation que je recommande.
-									<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-								</p>
+						{% for comment in comments %}
+							<div class="swiper-slide">
+								<div class="testimonial-wrap">
+									<div class="testimonial-item">
+										{% for image in comment.images %}
+											<img src="{{ asset(image) }}" alt="Comment Image"class="testimonial-img">
+										{% endfor %}
+										
+										<h3>{{ comment.author }}</h3>
+										<!-- <h4> &amp; </h4>-->
+										<p>
+											<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+											{{ comment.content }}
+											<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+										</p>
+									</div>
+								</div>
 							</div>
-						</div>
+							<!-- End testimonial item -->
+						{% endfor %}
 					</div>
 					<!-- End testimonial item -->
 
