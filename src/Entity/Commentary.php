@@ -23,7 +23,7 @@ class Commentary
     #[ORM\Column(type: Types::TEXT)]
     private ?string $content = null;
 
-    #[ORM\Column(type: Types::BLOB, nullable: true)]
+    #[ORM\Column(type: Types::STRING, length:255 , nullable: true)]
     private $images = null;
 
     #[ORM\Column(length: 255, nullable: true)]

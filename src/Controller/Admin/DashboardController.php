@@ -47,7 +47,7 @@ class DashboardController extends AbstractDashboardController
      
         yield MenuItem::linkToCrud('Identité du site', 'fas fa-id-card', IdentitéWebsite::class);
         yield MenuItem::linkToCrud('Catégorie', 'fas fa-boxes-stacked', Category::class);
-        yield MenuItem::linkToCrud('Formation', 'fas fa-book', Product::class);
+        yield MenuItem::linkToCrud('Produit', 'fas fa-book', Product::class);
         yield MenuItem::linkToCrud('Actualité', 'fas fa-newspaper', Actuality::class);
         yield MenuItem::linkToCrud('Commentaires', 'fas fa-comment', Commentary::class);
         yield MenuItem::linkToCrud('Utilisateur', 'fas fa-user', User::class);
