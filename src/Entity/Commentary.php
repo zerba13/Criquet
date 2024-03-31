@@ -24,7 +24,7 @@ class Commentary
     private ?string $content = null;
 
     #[ORM\Column(type: Types::STRING, length:255 , nullable: true)]
-    private $images = null;
+    public $images = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Id_Product = null;
@@ -75,7 +75,7 @@ class Commentary
         return $this->images;
     }
 
-    public function setImages($images): static
+    public function setImages(string $images): static
     {
         $this->images = $images;
 

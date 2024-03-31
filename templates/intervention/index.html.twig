@@ -1,16 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello InterventionController!{% endblock %}
+{% block title %}Hello InterventionController!
+{% endblock %}
 
 {% block body %}
-<main
+	<main
 		id="main">
 		<!-- ======= Breadcrumbs ======= -->
 		<div class="breadcrumbs" data-aos="fade-in">
 			<div class="container">
 				<h2>Intervention de sensibilisation</h2>
 				<p>Criquets & Co propose aussi des prestations de sensibilisation autour des insectes pour tous (milieux
-					          scolaire tous niveaux, en entreprise ou pour des chambres d'agriculture)
+										          scolaire tous niveaux, en entreprise ou pour des chambres d'agriculture)
 				</p>
 			</div>
 		</div>
@@ -28,7 +29,7 @@
 						<h3>Des interventions scolaire adaptées à chaque niveaux</h3>
 						<p class="fst-italic">
 							Ils existent différents cycles en fonction de chaque niveau allant du primaire jusqu'àu lycée et
-							              enseignements supérieur:
+														              enseignements supérieur:
 						</p>
 						<ul>
 							<li>
@@ -36,24 +37,24 @@
 							</li>
 							<p>
 								Les enfants découvrent le cycle que constituent la naissance, la croissance, la reproduction, le
-								                vieillissement, la mort en assurant les soins nécessaires aux élevages dans la classe.
-								                Au cours du cycle 2, l'élève va explorer, observer, expérimenter et questionner le monde qui l'entoure.
+																                vieillissement, la mort en assurant les soins nécessaires aux élevages dans la classe.
+																                Au cours du cycle 2, l'élève va explorer, observer, expérimenter et questionner le monde qui l'entoure.
 							</p>
 							<li>
 								<i class="bi bi-book"></i>
 								Le vivant, sa diversité et les fonctions qui le caractérisent
-								                (Collège)</li>
+																                (Collège)</li>
 							<p>L'élevage d'insectes répond à une problématique environnementale. C'est une solution pour recycler nos
-								                déchets ? Économiser de l'eau ? Produire l'alimentation de nos animaux d'élevage ?
-								                Présentation de la filière insectes, la biodiversité aujourd'hui, une agriculture durable, l'économie
-								                circulaire.
+																                déchets ? Économiser de l'eau ? Produire l'alimentation de nos animaux d'élevage ?
+																                Présentation de la filière insectes, la biodiversité aujourd'hui, une agriculture durable, l'économie
+																                circulaire.
 							</p>
 
 							<li>
 								<i class="bi bi-book"></i>Le potentiel des insectes. Une solution d'avenir? (Lycée et plus)
 							</li>
 							<p>Découvrir le potentiel des insectes pour l'avenir. Présentation de la filière insectes, de la
-								                réglementation actuelle et explication de l'agriculture circulaire.
+																                réglementation actuelle et explication de l'agriculture circulaire.
 							</p>
 						</ul>
 
@@ -63,7 +64,7 @@
 
 			</div>
 		</section>
-		
+
 		<section id="about" class="about">
 			<div class="container" data-aos="fade-up">
 
@@ -95,41 +96,36 @@
 			</div>
 
 			<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="75">
-					<div class="swiper-wrapper">
+				<div class="swiper-wrapper">
 
-						{% for comment in comments %}
-							<div class="swiper-slide">
-								<div class="testimonial-wrap">
-									<div class="testimonial-item">
-										{% for image in comment.images %}
-											<img src="{{ asset(image) }}" alt="Comment Image"class="testimonial-img">
-										{% endfor %}
-										
-										<h3>{{ comment.author }}</h3>
-										<!-- <h4> &amp; </h4>-->
-										<p>
-											<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-											{{ comment.content }}
-											<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-										</p>
-									</div>
+					{% for comment in comments %}
+						<div class="swiper-slide">
+							<div class="testimonial-wrap">
+								<div class="testimonial-item">
+									{% if comment.images is empty %}
+										<img src="{{ asset('assets/img/testimonials-1.jpg') }}"  >
+									{% else %}
+										<img src="{{ asset('assets/img/commentaire/' ~ comment.images ) }}"  >
+									{% endif %}
+									<h3>{{ comment.author }}</h3>
+									<p>
+										<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+										{{ comment.content }}
+										<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+									</p>
 								</div>
 							</div>
-							<!-- End testimonial item -->
-						{% endfor %}
-					</div>
-					<!-- End testimonial item -->
-
-
-
+						</div>
+						<!-- End testimonial item -->
+					{% endfor %}
 				</div>
-				<div class="swiper-pagination"></div>
+				<!-- End testimonial item -->
+
+
 			</div>
-
+			<div class="swiper-pagination"></div>
 		</div>
-	</section>
-	<!-- End Testimonials Section -->
 
-</main>
-<!-- End #main -->
-{% endblock %}
+	</div>
+</section>
+<!-- End Testimonials Section --></main><!-- End #main -->{% endblock %}
