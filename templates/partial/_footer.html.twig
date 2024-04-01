@@ -6,8 +6,10 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
+           {% if idWebsite is defined %}
             <h3> {{ idWebsite.getWebSite.name }} </h3>
             <p>
+            
               {{  idWebsite.getWebSite.adress }} <br>
               {{  idWebsite.getWebSite.city}} <br>
               {{ idWebsite.getWebSite.country }} <br><br>
@@ -17,6 +19,7 @@
                <strong>Email :</strong> {{ idWebsite.getWebSite.email}} <br> 
 
               </p>
+              {% endif %}
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">

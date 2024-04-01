@@ -21,7 +21,7 @@ class IdentitéWebsiteRepository extends ServiceEntityRepository
         parent::__construct($registry, IdentitéWebsite::class);
     }
 
-    public function getWebSite(): IdentitéWebsite
+    public function getWebSite() 
     {
         return $this->find(1);
     }
