@@ -15,7 +15,7 @@ class RouteTest extends WebTestCase
         // $crawler = $client->request('GET', '/formation');
         // $crawler = $client->request('GET', '/contact');
         // $crawler = $client->request('GET', '/cgv');
-        // $crawler = $client->request('GET', '/formation_detail/3');
+        $crawler = $client->request('GET', '/formation_detail/3');
         // $crawler = $client->request('GET', '/intervention');
         // $crawler = $client->request('GET', '/mention-legales');
         // $crawler = $client->request('GET', '/actualite');
