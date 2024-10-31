@@ -39,6 +39,7 @@ class ProductCrudController extends AbstractCrudController
             TextField::new('places')->setLabel('Lieux'),
             TextField::new('diploma')->setLabel('Diplôme'),
             TextField::new('price')->setLabel('Prix'),
+            TextEditorField::new('duration')->setLabel('Temp de formation')->setFormType(CKEditorType::class),
             TextEditorField::new('description_short')->setLabel('Description courte')->setFormType(CKEditorType::class)->hideOnIndex(),
             TextEditorField::new('duration_description')->setLabel('Organisations des heures')->setFormType(CKEditorType::class)->hideOnIndex(),
             TextEditorField::new('full_description')->setLabel('Description complète')->setFormType(CKEditorType::class)->hideOnIndex(),
