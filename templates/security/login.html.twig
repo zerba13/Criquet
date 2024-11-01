@@ -1,38 +1,44 @@
-
-
-{% block title %}Connexion !{% endblock %}
+{% extends 'base.admin.html.twig' %}
+{% block title %}Connexion !
+{% endblock %}
 
 {% block body %}
-<form method="post" class="mb-4"> {# Ajoutez la classe 'mb-4' pour correspondre à la classe 'mb-4' du premier formulaire #}
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
-        </div>
-    {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Veuillez vous connecter</h1>
-    
-    <!-- Email input -->
-    <div class="form-outline mb-4">
-        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-        <label class="form-label" for="inputEmail">Email address</label>
-    </div>
+	<form class="login"
+		method="post" class="mb-2">
+		{# Ajoutez la classe 'mb-4' pour correspondre à la classe 'mb-4' du premier formulaire #}
+		{% if error %}
+			<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		{% endif %}
 
-    <!-- Password input -->
-    <div class="form-outline mb-4">
-        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-        <label class="form-label" for="inputPassword">Password</label>
-    </div>
+		{% if app.user %}
+			<div class="mb-3">
+				Vous êtes connecté en tant que
+				{{ app.user.userIdentifier }},
+				<a href="{{ path('app_logout') }}">Déconnexion</a>
+			</div>
+		{% endif %}
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+		<h1 class="h3 mb-3 font-weight-normal">Veuillez vous connecter</h1>
 
-    <!-- Submit button -->
-    <button class="btn btn-primary btn-block" type="submit">Sign in</button> {# Modifiez la classe 'btn btn-primary btn-block' pour correspondre à la classe 'btn btn-primary btn-block' du premier formulaire #}
-</form>
+		<!-- Email input -->
+		<div class="form-outline mb-4">
+			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+			<label class="form-label" for="inputEmail">Adresse mail</label>
+		</div>
+
+		<!-- Password input -->
+		<div class="form-outline mb-4">
+			<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+			<label class="form-label" for="inputPassword">Mot de passe</label>
+		</div>
+
+		<input
+		type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+		<!-- Submit button -->
+		<button class="btn btn-primary btn-block" type="submit">Connexion</button>
+		{# Modifiez la classe 'btn btn-primary btn-block' pour correspondre à la classe 'btn btn-primary btn-block' du premier formulaire #}
+	</form>
 {% endblock %}

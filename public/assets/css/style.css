@@ -1,5 +1,3 @@
-
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -9,7 +7,7 @@ body {
 }
 
 a {
-  color: #768347 ;
+  color: #768347;
   text-decoration: none;
 }
 
@@ -153,7 +151,7 @@ h6 {
 }
 
 .get-started-btn:hover {
-  background: #94a45a ;
+  background: #94a45a;
   color: #fff;
 }
 
@@ -195,7 +193,7 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-size: 23px;
   font-weight: 600;
-  color: #768347 ;
+  color: #768347;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -212,7 +210,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
- color: #a2b162;
+  color: #a2b162;
 }
 
 .navbar .dropdown ul {
@@ -569,11 +567,11 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #4e4a2c ;
+  color: #4e4a2c;
 }
 
 .about .content .learn-more-btn {
-  background: #768347  80;
+  background: #768347 80;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px 9px 25px;
@@ -669,9 +667,9 @@ section {
 .courses .course-item {
   border-radius: 5px;
   border: 1px solid #eef0ef;
-  width:100%;
+  width: 100%;
   margin-top: 10px;
-  
+
 }
 
 .courses .course-content {
@@ -690,7 +688,7 @@ section {
 }
 
 .courses .course-content h3 a:hover {
-  color: #768347 ;
+  color: #768347;
 }
 
 .courses .course-content p {
@@ -867,7 +865,7 @@ section {
   display: block;
   width: 60px;
   height: 1px;
-  background: #768347 ;
+  background: #768347;
   bottom: 0;
   left: 0;
 }
@@ -918,12 +916,12 @@ section {
 }
 
 .cource-details-tabs .nav-link:hover {
-  color: #768347 ;
+  color: #768347;
 }
 
 .cource-details-tabs .nav-link.active {
-  color: #768347 ;
-  border-color: #768347 ;
+  color: #768347;
+  border-color: #768347;
 }
 
 .cource-details-tabs .tab-pane.active {
@@ -1004,8 +1002,9 @@ section {
 .article .card-text {
   color: #5e5e5e;
 }
-.article a.btn  {
-  background:#768347 ;
+
+.article a.btn {
+  background: #768347;
   float: right;
   border-radius: 50px;
   padding: 8px 25px;
@@ -1044,7 +1043,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #768347 ;
+  color: #768347;
   float: left;
   width: 44px;
   height: 44px;
@@ -1079,7 +1078,7 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #768347 ;
+  background: #768347;
   color: #fff;
 }
 
@@ -1128,7 +1127,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #768347 ;
+  border: 3px solid #768347;
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
 }
@@ -1142,7 +1141,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #768347 ;
+  border-color: #768347;
 }
 
 .contact .php-email-form input {
@@ -1154,7 +1153,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #768347 ;
+  background: #768347;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1163,7 +1162,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #768347 ;
+  background: #768347;
 }
 
 @keyframes animate-loading {
@@ -1176,6 +1175,28 @@ section {
   }
 }
 
+/*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+.login {
+
+  background-color: #a7a7a7;
+  display: inline-block;
+  width: 25%;
+  height: 50%;
+  margin: 0 10px -6px 0;
+  border: 3px solid #0d6efd;
+  border-radius: 10px;
+  align-content: center;
+  padding: 1%;
+  margin-left:40%;
+  margin-top:10%;
+  color:rgb(255, 255, 255) ;
+  
+}
+.login .form-label {
+  margin-top: 10px; 
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1294,7 +1315,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px 2px 20px;
-  background: #768347 ;
+  background: #768347;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
